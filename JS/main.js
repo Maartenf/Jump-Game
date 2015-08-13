@@ -4,7 +4,7 @@
 */
 
 //JSON image data
-var data = '{"1":"IMG_0215.JPG"}';
+var data = '{"player":"player.png"}';
 
 //Canvas can only draw when the window is loaded
 window.onload = function() {
@@ -14,5 +14,5 @@ window.onload = function() {
 		//Start game engine
     	Engine.init();
 	});
-	
+
 }

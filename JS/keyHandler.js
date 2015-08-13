@@ -10,6 +10,9 @@ var KeyHandler = {
 
 	//Key is pressed
 	keyDown: function(e) {
+		//Disable scrolling
+		e.preventDefault();
+
 		//Get number of key
 		var key = e.keyCode || e.which;
 
@@ -19,6 +22,9 @@ var KeyHandler = {
 
 	//Key is no longer pressed
 	keyUp: function(e) {
+		//Disable scrolling
+		e.preventDefault();
+		
 		//Get number of key
 		var key = e.keyCode || e.which;
 
