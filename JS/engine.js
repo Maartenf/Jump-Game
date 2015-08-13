@@ -1,6 +1,6 @@
 /* 	engine.js
 	======================================
-	Main file and engine for the game
+	Game engine with loop
 */
 
 var Engine = {

@@ -5,26 +5,26 @@
 
 var Player = {
 
-	//Player coordinats
-	x: 50,
-	y: 50,
+	//Player center coordinats
+	x: 100,
+	y: 100,
 
 	//Size of player
 	diameter: 30,
 
 	//How fast the player goes
-	speed: 0.5,
+	speed: 2,
 
-	//Update coordinats of player
+	//Update x-coordinate of player
 	update: function() {
-		this.x += this.speed;
-		this.y += this.speed;
+		if (KeyHandler.keys[39]) this.x += this.speed;
+		else if (KeyHandler.keys[37]) this.x -= this.speed;
 	},
 
 	//Draw updated player to the canvas
 	draw: function() {
 		ctx.fillStyle = "red";
-		ctx.fillRect(this.x, this.y, this.diameter, this.diameter);
+		ctx.fillRect(this.x - this.diameter / 2, this.y - this.diameter / 2, this.diameter, this.diameter);
 	}
 
 };
