@@ -8,16 +8,26 @@ var KeyHandler = {
 	//Stores all the key states
 	keys: [],
 
-	keyPress: function(e) {
+	//Key is pressed
+	keyDown: function(e) {
 		//Get number of key
 		var key = e.keyCode || e.which;
 
 		//Set number key in array to true
-		this.keys[key] = !this.keys[key] && true;
+		KeyHandler.keys[key] = true;
+	},
+
+	//Key is no longer pressed
+	keyUp: function(e) {
+		//Get number of key
+		var key = e.keyCode || e.which;
+
+		//Set number key in array to true
+		KeyHandler.keys[key] = false;
 	}
 
 };
 
 //Event handlers
-window.onkeydown = KeyHandler.keyPress;
-window.onkeyup = KeyHandler.keyPress;
+window.onkeydown = KeyHandler.keyDown;
+window.onkeyup = KeyHandler.keyUp;
