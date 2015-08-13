@@ -13,6 +13,7 @@ var IslandManager = {
 		var tileMap = [[1, 2, 2, 3],
 					   [4, 5, 5, 6],
 					   [4, 5, 5, 6],
+					   [4, 5, 5, 6],
 					   [7, 8, 8, 9]];
 
 		//Add new island to islands array
