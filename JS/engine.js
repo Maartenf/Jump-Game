@@ -48,6 +48,9 @@ var Engine = {
 		//Reset canvas
 		this.clearScreen();
 		
+		//Update and draw island
+		IslandManager.updateAndDrawIslands();
+		
 		//Update entities
 		Player.update();
 
@@ -73,6 +76,9 @@ var Engine = {
 	init: function() {
 		//Setup game canvas
 		this.setupCanvas();
+
+		//Spawn islands
+		IslandManager.createIsland();
 
 		//Start game loop
 		this.loop();
