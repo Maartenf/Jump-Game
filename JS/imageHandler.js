@@ -45,9 +45,18 @@ var ImageHandler = {
 		}
 	},
 
-	//Get IMG-object by name
-	getImage: function(name) {
-		return this.images[name];
+	drawImage: function(x, y, name, scaleFactor) {
+		//Set image smoothing off
+		ctx.mozImageSmoothingEnabled = false;
+		ctx.webkitImageSmoothingEnabled = false;
+		ctx.msImageSmoothingEnabled = false;
+		ctx.imageSmoothingEnabled = false;
+
+		//Get image from name
+		var image = this.images[name];
+
+		//Scale and draw image to canvas
+		ctx.drawImage(image, x, y, image.width * scaleFactor, image.width * scaleFactor);
 	}
 
 };
