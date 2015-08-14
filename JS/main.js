@@ -6,8 +6,14 @@
 //JSON atlass data
 var data = '{"right-island":{"x":0,"y":0,"width":5,"height":5},"top-island":{"x":0,"y":5,"width":5,"height":5},"top-left-island":{"x":5,"y":0,"width":5,"height":5},"top-right-island":{"x":5,"y":5,"width":5,"height":5},"bottom-island":{"x":0,"y":10,"width":5,"height":5},"bottom-left-island":{"x":5,"y":10,"width":5,"height":5},"bottom-right-island":{"x":10,"y":0,"width":5,"height":5},"center-island":{"x":10,"y":5,"width":5,"height":5},"left-island":{"x":10,"y":10,"width":5,"height":5},"player":{"x":0,"y":15,"width":5,"height":5}}';
 
+//All animation frames
+var animations = '{"walk":{"frameSpeed":10,"frames":["left-island","top-island","top-island","bottom-island"]}}';
+
 //Canvas can only be created when the window is loaded
 window.onload = function() {
+
+	//Setup animations
+	SpriteAnimationManager.addAnimations(animations);
 
 	//Preload images and start game when loaded
 	ImageHandler.preload("atlass.png", data, function() {
