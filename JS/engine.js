@@ -47,6 +47,9 @@ var Engine = {
 
 		//Reset canvas
 		this.clearScreen();
+
+		//Update and draw background
+		Background.updateAndDraw();
 		
 		//Update and draw island
 		IslandManager.updateAndDrawIslands();
