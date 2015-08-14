@@ -5,11 +5,11 @@
 
 var Player = {
 
-	//Player center coordinats
+	//Player coordinates
 	x: 100,
 	y: 100,
 
-	//How fast the player goes
+	//How fast the player moves
 	speed: 6,
 
 	//Factor of image scalation
