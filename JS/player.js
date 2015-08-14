@@ -30,7 +30,7 @@ var Player = {
 
 	//Draw updated player to the canvas
 	draw: function() {
-		ImageHandler.drawImage(this.x, this.y, "player", this.scaleFactor);
+		ImageHandler.drawImage(this.x, this.y, SpriteAnimationManager.getFrame("walk"), this.scaleFactor);
 	}
 
 };
