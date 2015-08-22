@@ -14,9 +14,9 @@ function Island(x, y, tileMap) {
 
 }
 
-//Update island
-Island.prototype.update = function(speed) {
-	this.y += speed;
+//Update island according to player speed
+Island.prototype.update = function() {
+	this.y += Player.speed;
 };
 
 //Draw island
@@ -69,19 +69,18 @@ Island.prototype.draw = function() {
 			}
 
 			//Continue if tileName is none
-			if (tileName === 0) continue;
+			if (tileName === "none") continue;
 
 			//Draw tile
-			ImageHandler.drawImage(xCo, yCo, tileName, 4);
-
-			//Update x-coordinate
-			xCo += 20;
+			ImageHandler.drawImage(xCo + x * 20, yCo + y * 20, tileName, 4);
 		}
-
-		//Reset x-coordinate
-		xCo = this.x;
-
-		//Update y-coordinate
-		yCo += 20;
 	}
+};
+
+Island.prototype.getWidth = function() {
+	return this.tileMap[0].length * 20;
+};
+
+Island.prototype.getHeight = function() {
+	return this.tileMap.length * 20;
 };
