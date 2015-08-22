@@ -10,11 +10,11 @@ var IslandManager = {
 
 	createIsland: function() {
 		//Tilemap for island
-		var tileMap = [[1, 2, 2, 3],
-					   [4, 5, 5, 6],
-					   [4, 5, 5, 6],
-					   [4, 5, 5, 6],
-					   [7, 8, 8, 9]];
+		var tileMap = [[1, 2, 2, 2, 2, 3],
+					   [4, 5, 5, 5, 5, 6],
+					   [0, 0, 4, 5, 5, 6],
+					   [0, 0, 4, 5, 5, 6],
+					   [0, 0, 7, 8, 8, 9]];
 
 		//Add new island to islands array
 		this.islands.push(new Island(300, 300, tileMap));
@@ -24,7 +24,7 @@ var IslandManager = {
 		for (var i = 0; i < this.islands.length; i++) {
 			var island = this.islands[i];
 
-			island.update(2);
+			island.update();
 			island.draw();
 		}
 	}
