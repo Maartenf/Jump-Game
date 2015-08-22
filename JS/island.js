@@ -84,3 +84,16 @@ Island.prototype.getWidth = function() {
 Island.prototype.getHeight = function() {
 	return this.tileMap.length * 20;
 };
+
+//Check if tile is walkable
+Island.prototype.checkIfWalkableTile = function() {
+	var tileXNumber = ((Player.x - this.x) - ((Player.x - this.x) % 20)) / 20;
+	var tileYNumber = ((Player.y - this.y) - ((Player.y - this.y) % 20)) / 20;
+
+	//Get tile type or number
+	var tile = this.tileMap[tileXNumber, tileYNumber];
+
+	//If tile type is none or 0, the tile is not walkable
+	if (tile === 0) return false;
+	else return true;
+};
