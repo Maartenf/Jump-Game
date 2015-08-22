@@ -11,9 +11,6 @@ var Background = {
 	//Start y-coordinate to draw
 	y: -20,
 
-	//How fast the background scrolls
-	speed: 1,
-
 	//Update and draw map to canvas
 	updateAndDraw: function() {
 		//Store animation frame for all tiles
@@ -28,8 +25,8 @@ var Background = {
 			}
 		}
 
-		//Scroll background
-		this.y += this.speed;
+		//Scroll background according to player speed
+		this.y += Player.speed;
 
 		//Reset background position
 		if (this.y >= 0) this.y = -20;
