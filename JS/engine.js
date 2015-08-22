@@ -34,19 +34,9 @@ var Engine = {
 		document.body.appendChild(canvas);
 	},
 
-	clearScreen: function() {
-		//Set color to white
-		ctx.fillStyle = "white";
-		//Fill screen
-		ctx.fillRect(0, 0, this.width, this.height);
-	},
-
 	loop: function() {
 		//Stop the game when paused
 		if (this.paused) return;
-
-		//Reset canvas
-		this.clearScreen();
 
 		//Update and draw background
 		Background.updateAndDraw();
