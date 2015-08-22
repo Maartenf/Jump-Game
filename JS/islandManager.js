@@ -27,6 +27,25 @@ var IslandManager = {
 			island.update();
 			island.draw();
 		}
+	},
+
+	checkCollision: function() {
+		for (var i = 0; i < this.islands.length; i++) {
+			var island = this.islands[i];
+
+			if (Player.x >= island.x &&
+				Player.x + Player.size <= island.x + island.getWidth &&
+				player.y >= island.y &&
+				Player.y + player.size <= island.x + island.getHeight) {
+
+				var walkable = island.checkIfWalkableTile();
+
+				if (!walkable) return true;
+			}
+		}
+
+		//Return false if no collision
+		return false;
 	}
 
 };
