@@ -3,14 +3,15 @@
 	Class for islands
 */
 
-function Island(x, y, tileMap) {
-
-	//Store coordinates
-	this.x = x;
-	this.y = y;
+function Island(tileMap) {
 
 	//Store tilemap for later use
 	this.tileMap = tileMap;
+
+	//Store coordinates
+	this.x = 0;
+
+	this.y = -this.getHeight();
 
 }
 
@@ -75,10 +76,6 @@ Island.prototype.draw = function() {
 			ImageHandler.drawImage(xCo + x * 20, yCo + y * 20, tileName, 4);
 		}
 	}
-};
-
-Island.prototype.getWidth = function() {
-	return this.tileMap[0].length * 20;
 };
 
 Island.prototype.getHeight = function() {
