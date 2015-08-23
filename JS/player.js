@@ -10,7 +10,7 @@ var Player = {
 	y: 700,
 
 	//How fast the player moves
-	speed: 0.5,
+	speed: 3,
 
 	//Speed to accelerate or deccelerate to
 	desiredSpeed: 1,
@@ -19,10 +19,10 @@ var Player = {
 	speedChangeTime: 10,
 
 	//Minimum speed of player
-	minSpeed: 1,
+	minSpeed: 3,
 
 	//Maximum speed of player
-	maxSpeed: 5,
+	maxSpeed: 6,
 
 	//Factor of image scalation
 	scaleFactor: 5,
